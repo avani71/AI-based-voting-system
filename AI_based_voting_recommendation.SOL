@@ -1,0 +1,14 @@
+// SPDX-License-Identifier: MIT
+pragma solidity^0.8.20;
+
+contract AIVotingAdvisor {
+    string public advice;
+    
+    function getVotingAdvice() public view returns (string memory) {
+        if (block.timestamp % 2 == 0) {
+            return "Vote YES";
+        } else {
+            return "Vote NO";
+        }
+    }
+}
